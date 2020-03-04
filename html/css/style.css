@@ -1,6 +1,7 @@
 
 html {
-    scroll-behavior: smooth;
+    scroll-padding-top:70px;
+
 }
 
 body {
@@ -112,9 +113,6 @@ p {
     color: #ffa270;
 }
 
-
-
-
 /* Welcome */
 
 #welcome {
@@ -167,6 +165,7 @@ p {
     width: 80%;
     max-width: 40.6rem;
     margin-top: 5.3rem;
+
     padding: 1rem;
     display: flex;
     flex-direction: column;
