@@ -1,369 +1,632 @@
-
-html {
-    scroll-padding-top:70px;
-
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: #9193A0;
-    margin: 0;
-
-    font-family: "Courier New", Courier, monospace;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body * {
-    box-sizing: inherit;
+* {
+  box-sizing: border-box;
 }
 
-p {
-    font-family: "Courier New", Courier, monospace;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
 }
 
-.myImage{
+ul, ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:hover, a:focus {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section {
+  padding: 100px 0;
+}
+
+h2 {
+  margin-bottom: 75px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ==================header================= */
+
+.menu-button {
   float: right;
+  font-size: 25px;
+  line-height: 40px;
+  color: #fff;
+  background: transparent;
+  padding: 0 0 0 15px;
+  border: 0;
 }
 
-/* main container */
-
-.main-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menu-button-checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 40px;
+  margin: 0 -15px 0 0;
+  opacity: 0;
 }
 
-/* backdrop */
+.menu-button-checkbox:checked ~ nav .nav {
+  display: block;
+}
 
-#backdrop {
-    position: fixed;
+.nav {
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+}
+
+.nav li {
+  display: block;
+  text-align: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #333;
+}
+
+.nav li a {
+  padding: 20px 12px;
+  color: #fff;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #222;
+}
+
+#logo {
+  float: left;
+
+}
+
+/* ===============home background================= */
+.home_bg {
+
+  background-image: url("https://www.viewnepaltreks.com/wp-content/uploads/2018/08/slider-1351x586.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.container_table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container_table_cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.container_table_cell h2 {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 54px;
+}
+
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 8px;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+
+
+.overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.devicon-git-plain {
+  max-width: 2em;
+}
+
+
+.devicon-git-plain path {
+  fill: #4691f6;
+}
+
+/* ====================about me================== */
+
+.col-right, .col-left {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.personal-info h3 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+.personal-info p {
+  color: #767676;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.skill {
+  margin: 30px auto;
+}
+
+.skill li {
+  font-size: 15px;
+  line-height: 35px;
+  text-transform: capitalize;
+}
+
+.button-group .download_cv, .button-group .hire_me {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+
+
+
+}
+
+ .button-group .download_cv {
+   margin-right: 10px;
+
+}
+
+.button-group .hire_me {
+   margin-right: 10px;
+   float: right;
+
+}
+
+.button-group a {
+  display: block-inli;
+  color: #000;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 38px;
+  text-transform: capitalize;
+}
+
+.button-group a:hover {
+  background: #000;
+  color: #fff;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  -ms-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ==================== skills=================== */
+
+.my_skills {
+background: #f9f9f9;
+  /* height: 50%; */
+
+
+}
+
+.service-items .service-content  {
+  float: left;
+    width: 33.33%;
+    padding: 0 180px;
+}
+
+.service-content i {
+  font-size: 40px;
+  line-height: 80px;
+  /* width :33.33%; */
+}
+
+
+
+.service-content p {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+
+.my_skills a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.my_skills a:hover::before{
+  transform: scale(0);
+}
+
+.my_skills a i{
+  transition: 0.3s ease-in;
+}
+
+.my_skills a:hover i{
+  background: linear-gradient(45deg,#22a6b3,#30336b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+
+
+/* ========================resume========================= */
+
+.col-horizontal {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #767676;
+}
+
+.col-horizontal:last-child {
+  border-bottom: 0;
+}
+
+h3.resume-subtitle {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+
+.col-horizontal .col-item {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.experience-year {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.resume-detail h4 {
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.resume-detail h6 {
+  font-size: 12px;
+  margin-bottom: 9px;
+  text-transform: capitalize;
+}
+
+.resume-detail p {
+  line-height: 22px;
+}
+
+/* ==========================quotes=========================== */
+
+.quotes {
+  background-image: url("file:///Users/ankitshah/SD/HTML/NewPersonalSite/html/images/freelance.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  position: relative;
+}
+
+.quotes-inner {
+  color: #fff;
+  text-align: center;
+}
+
+.quotes-inner h3 {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.quotes-inner p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.quotes-inner a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 11px;
+  padding: 12px 49px;
+  display: inline-block;
+  margin-top: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* ============================works=============================== */
+
+.works {
+  background-color: #f7f7f7;
+}
+
+.col-work {
+  float: left;
+  width: 33.333333333%;
+  padding: 0 15px;
+}
+
+.col-work a {
+  margin-bottom: 14px;
+  display: block;
+}
+
+.col-work a {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: .2s linear;
+  -moz-transition: .2s linear;
+  -ms-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.col-work a:hover {
+  box-shadow: 0 16px 22px 0 rgba(90, 91, 95, 0.3);
+  top: -5px;
+}
+
+/* ===========================contact================================ */
+
+.contact-form {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form .form-input:first-child,
+.contact-form .form-input:nth-child(2) {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.contact-form .form-input:nth-child(3) {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.contact-form .form-input .form-style {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-transform: capitalize;
+  padding-bottom: 19px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.contact-form .form-input textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+}
+
+.form-submit {
+  text-align: left;
+  padding: 0 15px;
+}
+
+.form-submit input {
+  border: 1px solid #000;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 15px 60px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
+}
+
+.form-submit input:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ============================footer================================ */
+
+footer {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff
+}
+
+.footer-content p {
+  line-height: 22px;
+}
+
+.footer-social-icon a i {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+/*============================flexbox============================  */
+
+.summary, .service-items, .col-horizontal, .work-items, .contact-form .form-input {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.col-left, .col-right, .download_cv, .hire_me, .service-items .service-content, .col-horizontal .col-item, .work-items .col-work {
+  width: 100%;
+}
+
+.hire_me, .service-items .service-content {
+  margin-top: 20px;
+}
+
+.contact .contact-form {
+  margin-right: 300px;
+}
+
+.contact .contact-form .form-input {
+  width: 160%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .menu-button-checkbox, .menu-button {
     display: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
   }
 
-/* Navbar */
+  .nav {
+    float: right;
+    display: block;
+    width: auto;
+    position: static;
+  }
 
-.navbar {
-    position: fixed;
-    padding: 0.5rem;
-    top: 0;
-    width: 100%;
-    height: 4.3rem;
-    background-color: #424647;
-    /* #004ba0; */
-    color: rgb(219, 219, 219);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+  .nav li {
+    display: inline-block;
+  }
 
-.navbar div {
-    margin: 0 1rem;
-}
+  .nav li a {
+    color: #fff;
+    padding: 10px 12px;
+    display: block;
+    text-transform: capitalize;
+  }
 
-.nav-name {
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    width: 100%;
-}
+  .summary, .service-items, .col-horizontal, .work-items, .contact .contact-form {
+    display: inline-block;
+  }
 
-.nav-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: rgb(219, 219, 219);
-}
-
-.nav-link:hover,
-.nav-link:active {
-    color: #ffa270;
-    text-decoration: none;
-}
-
-.nav-right-options {
-    display: none;
-}
-
-
-.nav-toggle-icon {
-    position: relative;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-}
-
-
-.nav-toggle-icon:hover,
-.nav-toggle-icon:active {
-    cursor: pointer;
-    color: #ffa270;
-}
-
-/* Welcome */
-
-#welcome {
-
-    color:rgb(58, 58, 58);
-
-    background-color: #B2BFC3;
-
-    /* rgb(219, 219, 219); */
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-top: 4.3rem;
-}
-
-#welcome .text {
-    max-width: 40.6rem;
-    width: 80%;
-    text-align: center;
-}
-
-.name {
-    font-size: 2.7rem;
-}
-
-.job-title {
-    font-size: 1.5rem;
-}
-
-.mini-bio {
-    text-align: center;
-    max-width: 40.6rem;
-}
-
-.headshot {
-    width: 23rem;
-    border-radius: 70%;
-}
-
-
-/* about me */
-
-#about-me {
-    background-color: #B2BFC3;
-    /* background-color: rgb(219, 219, 219); */
-    color:rgb(58, 58, 58);
-    width: 80%;
-    max-width: 40.6rem;
-    margin-top: 5.3rem;
-
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Skills */
-
-#skills {
-    background-color:#B2BFC3;
-     /* #ff7043; */
-    color:rgb(58, 58, 58);
-    width: 80%;
-    max-width: 650px;
-    margin-top: 5.3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.skill-icons-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skill-icon {
-    width: 100%;
-    flex-basis: 33%;
-    font-size: 3rem;
-    flex-shrink: 1;
-    margin: 0 auto;
-    padding: 0.25rem;
-}
-
-.skill-name {
-    font-size: 1rem;
-    min-width: 6rem;
-}
-
-/* Projects */
-
-#projects {
-    background-color: #B2BFC3;
-    color:rgb(58, 58, 58);
-    width: 80%;
-    max-width: 40.6rem;
-    margin-top: 5.3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.projects-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto;
-    /* 1fr; */
-    justify-items: center;
-    justify-content: center;
-}
-
-.project {
-    color:rgb(58, 58, 58);
-    background-color: #B2BFC3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-}
-
-.project-picture {
+  .col-left, .col-right, .col-horizontal .col-item {
     width: 50%;
-    max-height: 20.8rem;
-}
+  }
 
-.project-buttons {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+  .download_cv {
+    width: 180px;
+  }
 
-.project-button {
-    font-family: 'Open Sans', sans-serif;
-    padding: 0.5rem;
-    margin: 0.25rem;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-    background-color: #004ba0;
-    color: rgb(219, 219, 219);
-}
+  .hire_me {
+    width: 135px;
+    margin-top: 1 auto;
+  }
 
-/* Contact-Me */
+  .service-items .service-content, .service-items .service-content,  .work-items .col-work{
+    width: 33.33333%;
+    margin-top: auto;
+  }
 
-#contact-me {
-    background-color: #B2BFC3;
-    /* background-color: rgb(219, 219, 219); */
-    color:rgb(58, 58, 58);
-    width: 80%;
-    max-width: 40.6rem;
-    margin-top: 5.3rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  .contact .contact-form {
+    margin-left: 150px;
+  }
 
-.contact-icons {
-    width: 100%;
-    min-width: 4rem;
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+  .contact .contact-form .form-input {
+    width: 50%;
+  }
 
-.contact-icon {
-    margin: 0.5rem;
-    width: 100%;
-    max-width: 4.5rem;
-    color:rgb(58, 58, 58);
-    text-decoration: none;
-    display: flex;
-    flex-shrink: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-icon i {
-    padding: 0.5rem;
-}
-
-.contact-icon i:hover{
-    color:#c63f17;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
-}
-
-.contact-icon .contact-icon-text {
-    /* visibility: hidden; */
-    font-size: 1rem;
-}
-
-/* Footer */
-
-#footer {
-    width: 100%;
-    bottom: 0;
-    margin-top: 5.3rem;
-    padding: 1rem 0;
-    background-color: #424647;
-    /* #004ba0; */
-    color: rgb(219, 219, 219);
-}
-
-.copyright-text {
-    margin-left: 39rem;
-}
-
-/* media queries */
-
-/* @media (min-width:38rem){
-    #backdrop {
-        display: none;
-    } */
-
-    .nav-toggle-icon {
-        display: none;
-    }
-
-    .nav-right-options {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        list-style: none;
-    }
-
-    .nav-right-option {
-        display: inline-block;
-        margin-right: 2rem;
-    }
-
-
+  .contact .contact-form .form-input textarea {
+    width: 210%;
+  }
 }
