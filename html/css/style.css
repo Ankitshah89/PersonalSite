@@ -395,7 +395,8 @@ h3.resume-subtitle {
 /* ==========================quotes=========================== */
 
 .quotes {
-  background-image: url("file:///Users/ankitshah/SD/HTML/NewPersonalSite/html/images/freelance.jpg");
+  /* file:///Users/ankitshah/SD/HTML/NewPersonalSite/html/images/freelance.jpg */
+  background-image: url("images/freelance.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
