@@ -289,7 +289,7 @@ h2 {
 
 .my_skills {
 background: #f9f9f9;
-  /* height: 50%; */
+
 
 
 }
@@ -297,13 +297,13 @@ background: #f9f9f9;
 .service-items .service-content  {
   float: left;
     width: 33.33%;
-    padding: 0 180px;
+    padding: 0 150px;
 }
 
 .service-content i {
   font-size: 40px;
   line-height: 80px;
-  /* width :33.33%; */
+  width :33.33%;
 }
 
 
