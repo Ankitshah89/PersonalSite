@@ -395,8 +395,9 @@ h3.resume-subtitle {
 /* ==========================quotes=========================== */
 
 .quotes {
+  /* https://stylics.com.my/v2/wp-content/uploads/freelance-web-designer.jpg */
   /* file:///Users/ankitshah/SD/HTML/NewPersonalSite/html/images/freelance.jpg */
-  background-image: url("https://github.com/Ankitshah89/PersonalSite/blob/master/html/images/freelance.jpg");
+  background-image: url("https://stylics.com.my/v2/wp-content/uploads/freelance-web-designer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
