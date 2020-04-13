@@ -124,7 +124,7 @@ h2 {
 /* ===============home background================= */
 .home_bg {
 
-  background-image: url("https://www.viewnepaltreks.com/wp-content/uploads/2018/08/slider-1351x586.jpg");
+  background-image: url("https://myvarwww.s3.us-east-2.amazonaws.com/nepal.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -395,9 +395,8 @@ h3.resume-subtitle {
 /* ==========================quotes=========================== */
 
 .quotes {
-  /* https://stylics.com.my/v2/wp-content/uploads/freelance-web-designer.jpg */
-  /* file:///Users/ankitshah/SD/HTML/NewPersonalSite/html/images/freelance.jpg */
-  background-image: url("https://stylics.com.my/v2/wp-content/uploads/freelance-web-designer.jpg");
+
+  background-image: url("https://myvarwww.s3.us-east-2.amazonaws.com/freelance.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
